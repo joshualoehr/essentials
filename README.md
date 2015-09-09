@@ -1,1 +1,2 @@
-#Fuck Bash\nFuck it.
+#Fuck Bash
+  Fuck it.
