@@ -9,18 +9,19 @@ amend () {
   git commit --amend -C HEAD
 }
 multiPush() {
-  currBranch=(git branch)
-  if [$1 == currBranch]
+  currBranch=$(git branch)
+  currBranch=${currBranch:2}
+  if [ "$1" == "$currBranch" ]
   then
-    git push origin currBranch
+    git push origin "$currBranch"
     shift 
     for var in "$@"
     do
-      git checkout $var
-      git pull origin currBranch
-      git push origin $var
+      git checkout "$var"
+      git pull origin "$currBranch"
+      git push origin "$var"
     done
-    git checkout currBranch
+    git checkout "$currBranch"
   else
     echo "First argument must be the current branch"
   fi
@@ -35,8 +36,4 @@ commitAll() {
   fi  
 }
 test () {
-  if [ -z "$1" ]
-  then
-    echo "Must provide an argument"
-  fi
 }
