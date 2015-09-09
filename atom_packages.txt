@@ -1,0 +1,18 @@
+Atom Packages
+-------------
+
+atom-beautify
+atom-typescript
+auto-update-packages
+color-picker
+emmet
+highlight-line
+language-jade
+linter
+linter-csslint
+linter-eslint
+minimap
+pigments
+project-manager
+
+Also disable that autocomplete BS
