@@ -9,8 +9,16 @@ amend () {
   git commit --amend -C HEAD
 }
 multiPush() {
-  currBranch=$(git branch)
-  currBranch=${currBranch:2}
+  branches=$(git branch)
+  IFS=$'\n' y=(${branches//$'\n'/ }) # Thank you Stack Overflow
+  currBranch=""
+  for var in $branches
+  do
+    if [[ $var =~ ^\* ]] ; then
+      currBranch=${var:2}
+    fi
+  done
+
   if [ "$1" == "$currBranch" ]
   then
     git push origin "$currBranch"
@@ -32,8 +40,6 @@ commitAll() {
     echo "Must provide a commit message"
   else
     git add -A
-    git commit -m $1
+    git commit -m "$1"
   fi  
-}
-test () {
 }
