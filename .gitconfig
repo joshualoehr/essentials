@@ -1,0 +1,8 @@
+[color]
+	ui = true
+[user]
+	name = Josh Loehr
+	email = loehrj@wwu.edu
+[core]
+	editor = vim
+	excludesfile = /home/loehrj/.gitignore_global
