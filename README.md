@@ -1,2 +1,0 @@
-#Fuck Bash
-  Fuck it.
