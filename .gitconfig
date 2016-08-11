@@ -5,4 +5,4 @@
 	email = loehrj@wwu.edu
 [core]
 	editor = vim
-	excludesfile = /home/loehrj/.gitignore_global
+	excludesfile = /home/Josh/.gitignore_global
