@@ -1,0 +1,11 @@
+BoldAsFont=-1
+Transparency=medium
+CursorType=block
+Font=Consolas
+FontHeight=11
+AllowBlinking=yes
+ClicksPlaceCursor=yes
+Rows=48
+BellType=0
+BellFlash=yes
+Columns=200
