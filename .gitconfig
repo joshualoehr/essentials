@@ -6,3 +6,8 @@
 [core]
 	editor = vim
 	excludesfile = /home/loehrj/.gitignore_global
+[alias]
+    gg = status
+    amend = commit --amend -C HEAD
+    last = show HEAD
+    unstage = reset HEAD --
