@@ -1,2 +1,2 @@
-#Fuck Bash
-  Fuck it.
+#Bash is alright
+ Changed my mind.
