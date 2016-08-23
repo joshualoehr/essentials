@@ -124,6 +124,9 @@ alias l='ls -CF'
 eval `dircolors ~/.dir_colors`
 alias ls="ls --color=auto --ignore='*.pyc'"
 
+#enable 256 color support
+export TERM=xterm-256color
+
 topfive() {
     find . -type f -exec ls -s {} \; | sort -n -r | head -$1	
 }

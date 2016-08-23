@@ -1,11 +1,17 @@
-syntax on
 filetype indent plugin on
 set modeline
-set background=dark
 set splitbelow
 set splitright
 set hlsearch
+set incsearch
 set number
+set wildmenu
+set lazyredraw
+set showmatch
+
+syntax on
+set t_Co=256
+colorscheme oceanblack256
 
 let mapleader = "f"
 nnoremap <C-J> <C-W><C-J>
