@@ -90,6 +90,31 @@ fi
 # Set Oracle Home
 export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
 
+# git authors alias function
+alias gg='git status'
+function git-whodidit() {
+  NAMES=(
+    "Josh Loehr" "34"
+    "Edson Smith" "31"
+    "Lauren Heller" "35"
+    "Brent Carey" "32"
+    "Wesley Van Komen" "33" 
+    "Jessica Betts" "97"
+  )
+  CMDS=("git blame $1")
+  count=0
+  while [ "x${NAMES[count]}" != "x" ]
+  do
+      CMDS[$((count+1))]="| GREP_COLOR='01;${NAMES[$((count+1))]}' egrep --color=always -E '^|^.*${NAMES[count]}.*$'"
+      count=$((count+2))
+  done
+  
+  cmd=$(printf " %s" "${CMDS[@]}")
+  cmd=${cmd:1}
+  eval $cmd
+}
+alias gw='git-whodidit'
+
 # some more ls aliases
 alias ll='ls -la'
 alias la='ls -A'
@@ -97,11 +122,7 @@ alias l='ls -CF'
 
 #enable dir_colors
 eval `dircolors ~/.dir_colors`
-alias ls="ls --color=auto"
-
-# Git aliases
-alias gg='git status'
-alias ga='git commit --amend -C HEAD'
+alias ls="ls --color=auto --ignore='*.pyc'"
 
 topfive() {
     find . -type f -exec ls -s {} \; | sort -n -r | head -$1	
