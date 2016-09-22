@@ -97,11 +97,10 @@ alias l='ls -CF'
 
 #enable dir_colors
 eval `dircolors ~/.dir_colors`
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --ignore='*.pyc'"
 
-# Git aliases
-alias gg='git status'
-alias ga='git commit --amend -C HEAD'
+#enable 256 color support
+export TERM=xterm-256color
 
 topfive() {
     find . -type f -exec ls -s {} \; | sort -n -r | head -$1	
@@ -132,58 +131,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export WORKON_HOME=$HOME/.virtualenvs
-
 function cd() {
-    #gets the target location for the cd
-    if [ -z "$@" ];
-    then
-        target=~
-    else
-        target=$@
-    fi
-
-    #sets the correct virtual environment based on current environment and cd path
-    if [[ $target == *"django"* ]]
-    then
-        if [ !${VIRTUAL_ENV} ] || [ ${VIRTUAL_ENV} != 'django' ];
-        then
-            eval workon django
-        fi
-    fi
-
-    if [[ $target == *"resnet"* ]]
-    then
-        if [ !${VIRTUAL_ENV} ] || [ ${VIRTUAL_ENV} != 'resnet' ];
-        then
-            eval workon resnet
-        fi
-    fi
-
-    if [[ $target == *"data-api"* ]]
-    then
-        if [ !${VIRTUAL_ENV} ] || [ ${VIRTUAL_ENV} != 'data-api' ];
-        then
-            eval workon data-api
-        fi
-    fi
-
-    if [[ $target == *"internal"* ]]
-    then
-        if [ !${VIRTUAL_ENV} ] || [ ${VIRTUAL_ENV} != 'internal' ];
-        then
-            eval workon internal
-        fi
-    fi
-
-    if [[ $target == *"external"* ]]
-    then
-        if [ !${VIRTUAL_ENV} ] || [ ${VIRTUAL_ENV} != 'external' ];
-        then
-            eval workon external
-        fi
-    fi
-
     #runs cd with the args and calls ls
     builtin cd "$@" && ls;
 }
