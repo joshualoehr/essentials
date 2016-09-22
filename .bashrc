@@ -187,3 +187,7 @@ function cd() {
     #runs cd with the args and calls ls
     builtin cd "$@" && ls;
 }
+export PATH=$HOME/.local/bin:$PATH
+
+export NVM_DIR="/home/loehrj/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
