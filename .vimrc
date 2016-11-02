@@ -11,7 +11,6 @@ set showmatch
 
 syntax on
 set t_Co=256
-colorscheme oceanblack256
 
 let mapleader = "f"
 nnoremap <C-J> <C-W><C-J>
