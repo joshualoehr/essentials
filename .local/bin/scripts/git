@@ -5,6 +5,7 @@ alias gg='git status'
 
 # Command to highlight all lines of a file based on who committed them
 function git-whodidit() {
+<<<<<<< HEAD
   # NAMES=(
   #   "Josh Loehr" "34"
   #   "Edson Smith" "31"
