@@ -1,0 +1,7 @@
+#!/bin/bash
+# Nari specific bash configurations
+
+export WORKON_HOME=$HOME/.virtualenvs
+
+# Set PYTHONSTARTUP file for auto-imports in django shell
+export PYTHONSTARTUP=$HOME/django/shell_imports.py
