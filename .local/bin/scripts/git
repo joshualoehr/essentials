@@ -1,0 +1,33 @@
+#!/bin/bash
+# Git scripts
+
+alias gg='git status'
+
+# Command to highlight all lines of a file based on who committed them
+function git-whodidit() {
+  # NAMES=(
+  #   "Josh Loehr" "34"
+  #   "Edson Smith" "31"
+  #   "Lauren Heller" "35"
+  #   "Brent Carey" "32"
+  #   "Wesley Van Komen" "33" 
+  #   "David Shorten" "97"
+  #   "Alessandro Banducci" "36"
+  # )
+  NAMES=(
+    "Josh Loehr" "34"
+  )
+  CMDS=("git blame $1")
+  count=0
+  while [ "x${NAMES[count]}" != "x" ]
+  do
+      CMDS[$((count+1))]="| GREP_COLOR='01;${NAMES[$((count+1))]}' egrep --color=always -E '^|^.*${NAMES[count]}.*$'"
+      count=$((count+2))
+  done
+  
+  cmd=$(printf " %s" "${CMDS[@]}")
+  cmd=${cmd:1}
+  eval $cmd
+}
+alias gw='git-whodidit'
+
