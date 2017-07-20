@@ -7,11 +7,6 @@ case $- in
       *) return;;
 esac
 
-source ~/.local/bin/scripts/misc
 source ~/.local/bin/scripts/git
 source ~/.local/bin/scripts/dirs
-
-# Set npm to install global packages locally
-NPM_PACKAGES=${HOME}/.npm_global
-PATH="$NPM_PACKAGES/bin:$PATH"
-
+source ~/.local/bin/scripts/misc
