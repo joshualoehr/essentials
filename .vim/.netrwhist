@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/loehrj/angular2/angular2-testing/src/services'
-let g:netrw_dirhist_2='/home/loehrj/angular2/angular2-testing/src'
-let g:netrw_dirhist_3='/home/loehrj/angular2/angular2-testing/src/comps'
-let g:netrw_dirhist_4='/home/loehrj/angular2/angular2-testing/src'
-let g:netrw_dirhist_5='/home/loehrj/angular2/angular2-testing/src/pipes'
-let g:netrw_dirhist_6='/home/loehrj/.local/bin/scripts'
-let g:netrw_dirhist_7='/home/loehrj/.ipython/profile_default/startup'
+let g:netrw_dirhist_cnt =0
