@@ -10,3 +10,4 @@ esac
 source ~/.local/bin/scripts/git
 source ~/.local/bin/scripts/dirs
 source ~/.local/bin/scripts/misc
+source ~/.local/bin/scripts/sparkcognition
