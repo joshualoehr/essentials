@@ -12,7 +12,3 @@ if [ -f '/home/loehrj/.local/lib/google-cloud-sdk/path.bash.inc' ]; then source 
 if [ -f '/home/loehrj/.local/lib/google-cloud-sdk/completion.bash.inc' ]; then source '/home/loehrj/.local/lib/google-cloud-sdk/completion.bash.inc'; fi
 
 alias gssh="gcloud compute ssh"
-
-export PATH="/home/loehrj/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
