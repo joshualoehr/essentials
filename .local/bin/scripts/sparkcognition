@@ -1,9 +1,4 @@
 #!/bin/bash
-export SPARK_HOME=/home/loehrj/.local/lib/spark-2.1.0-bin-hadoop2.7
-export PATH=$PATH:$SPARK_HOME/bin
-
-export PYSPARK_DRIVER_PYTHON=python
-export DATA=/home/loehrj/sparkcognition/data
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/loehrj/.local/lib/google-cloud-sdk/path.bash.inc' ]; then source '/home/loehrj/.local/lib/google-cloud-sdk/path.bash.inc'; fi
